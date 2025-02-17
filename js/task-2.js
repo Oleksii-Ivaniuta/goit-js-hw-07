@@ -33,7 +33,6 @@ images.forEach(img => {
   const image = document.createElement("img");
   image.src = img.url;
   image.alt = img.alt;
-  image.width = 320;
   image.classList.add("task2-img")
   li.append(image);
 });
