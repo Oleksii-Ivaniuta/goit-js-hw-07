@@ -95,6 +95,8 @@ ol {
   letter-spacing: 0.04em;
   color: #2e2f42;
   padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
 }
 
 .task3-Header {
@@ -151,10 +153,152 @@ ol {
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.task4-form-btn:hover,
-.task4-form-btn:focus {
-  background-color: #2e52d1;
+.task4-form-btn:hover {
+  background-color: #6c8cff;
 }
-.task4-form-btn:active {
-  background-color: chocolate;
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  max-width: 188px;
+  padding: 8px;
+  gap: 16px;
+  border-radius: 8px;
+}
+.widget p {
+  margin: 0;
+}
+.change-color {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 148px;
+  height: 40px;
+  background: #4e75ff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.change-color:hover {
+  background-color: #6c8cff;
+}
+
+.form-input:hover {
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+.form-input:focus {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  outline: none;
+}
+
+#boxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 44px;
+}
+
+.task6-control-div {
+  display: flex;
+  flex-direction: row;
+  background-color: #f6f6fe;
+  border-radius: 8px;
+  padding: 32px;
+  width: 486px;
+  height: 104px;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.task6-boxes-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 44px;
+  background-color: #f6f6fe;
+  border-radius: 8px;
+  padding: 32px 28px 32px 32px;
+  width: 486px;
+}
+
+.task6-input {
+  border: 1px solid #808080;
+  border-radius: 8px;
+  padding: 8px 8px 8px 72px;
+  width: 150px;
+  height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.task6-create-btn {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 120px;
+  height: 40px;
+  background: #4e75ff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.task6-create-btn:hover {
+  background: #6c8cff;
+}
+
+.task6-destroy-btn {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 120px;
+  height: 40px;
+  background: #ff4e4e;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.task6-destroy-btn:hover {
+  background: #ff7070;
 }

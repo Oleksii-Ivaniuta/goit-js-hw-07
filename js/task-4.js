@@ -6,7 +6,15 @@ for (const item of loginForm.children) {
     if (item !== loginForm.children[2]) {
     item.classList.add("task4-form-label");
     for (const input of item.children) {
-        input.classList.add("task4-form-input");
+        input.classList.add("task4-form-input", "form-input");
+        if (input) {
+            input.addEventListener("focus", () => {
+    input.placeholder = "Type area"
+            })
+            input.addEventListener("blur", () => {
+                input.placeholder = "";
+            })
+        }
     }
     }
     else {
@@ -22,7 +30,8 @@ loginForm.addEventListener("submit", event => {
 console.log (`All form fields must be filled in`)
     return;
     }
-    console.log(`${form.elements.email.name}: ${email.trim()} , ${form.elements.password.name}: ${password.trim()}`);
+    console.log(`${form.elements.email.name}: ${email.trim()} ; ${form.elements.password.name}: ${password.trim()}`);
     form.reset();
     return;
 })
+

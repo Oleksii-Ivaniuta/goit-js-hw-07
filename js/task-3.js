@@ -1,5 +1,5 @@
 const nameInput = document.querySelector("#name-input");
-nameInput.classList.add("task3-form-input");
+nameInput.classList.add("task3-form-input", "form-input");
 const nameOutput = document.querySelector("#name-output");
 nameOutput.parentElement.classList.add("task3-Header");
 nameInput.addEventListener("input", (event) => {
