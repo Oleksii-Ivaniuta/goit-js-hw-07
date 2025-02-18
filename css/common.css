@@ -74,7 +74,7 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 360px;
+  width: calc((1128px - 24px * 2) / 3);
   height: 300px;
   overflow: hidden;
 }
@@ -104,4 +104,57 @@ ol {
   line-height: 133%;
   letter-spacing: 0.04em;
   color: #2e2f42;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task4-form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.task4-form-input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  padding-left: 16px;
+}
+
+.task4-form-btn {
+  margin-top: 8px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 86px;
+  height: 40px;
+  background: #4e75ff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.task4-form-btn:hover,
+.task4-form-btn:focus {
+  background-color: #2e52d1;
+}
+.task4-form-btn:active {
+  background-color: chocolate;
 }
