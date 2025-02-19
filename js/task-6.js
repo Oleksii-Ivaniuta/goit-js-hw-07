@@ -25,22 +25,18 @@ function destroyBoxes() {
 function createBoxes(boxQuantity) {
   destroyBoxes();
   let boxSize = 20;
-  for (let i = 1; i <= boxQuantity; i++){
+  const boxArray = [];
+  for (let i = 1; i <= boxQuantity; i++) {
     let boxColor = getRandomHexColor();
-    const box = document.createElement("div");
-    box.id = `box${i}`;
-    box.classList.add("task6-box")
     boxSize += 10;
-    box.style.width = boxSize + "px";
-    box.style.height = boxSize + "px";
-    box.style.backgroundColor = boxColor;
-    boxesDiv.append(box);
+    boxArray.push(`<div id="${i}" style="width: ${boxSize}px; height: ${boxSize}px; background-color: ${boxColor};"></div>`);
   }
+  return boxArray.join("");
 }
 
 createBtn.addEventListener("click", () => {
   if (input.value >= 1 && input.value <= 100) {
-    createBoxes(input.value);
+    boxesDiv.insertAdjacentHTML("afterbegin", createBoxes(input.value));
     input.value = "";
   }
 })

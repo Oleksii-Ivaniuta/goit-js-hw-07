@@ -25,16 +25,12 @@ const images = [
   }
 ];
 
-const galery = document.querySelector(".gallery");
+const gallery = document.querySelector(".gallery");
+const markupArray = [];
 images.forEach(img => {
-  const li = document.createElement("li");
-  li.classList.add("task2-li")
-  galery.append(li);
-  const image = document.createElement("img");
-  image.src = img.url;
-  image.alt = img.alt;
-  image.classList.add("task2-img")
-  li.append(image);
+  const image = `<img src="${img.url}" alt="${img.alt}" class="task2-img"/>`;
+  const li = `<li class="task2-li">${image}</li>`;
+  markupArray.push(li);
 });
-
-console.log(galery);
+const markupStr = markupArray.join("");
+gallery.insertAdjacentHTML("afterbegin", markupStr);

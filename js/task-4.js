@@ -27,10 +27,14 @@ loginForm.addEventListener("submit", event => {
     const email = form.elements.email.value;
     const password = form.elements.password.value;
     if (email === "" || password === "") {
-console.log (`All form fields must be filled in`)
+        alert(`All form fields must be filled in`);
     return;
     }
-    console.log(`${form.elements.email.name}: ${email.trim()} ; ${form.elements.password.name}: ${password.trim()}`);
+    const loginObj = {};
+    loginObj[`${form.elements.email.name}`]
+        = email.trim();
+    loginObj[`${form.elements.password.name}`] = password.trim();
+    console.log(loginObj);
     form.reset();
     return;
 })
